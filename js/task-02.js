@@ -30,3 +30,27 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+
+const ingredientsMaker = ingredients.map(ingredient => {
+
+  const newEl = document.createElement("li");
+  // console.log(newEl);
+
+  newEl.textContent = ingredient; 
+  newEl.classList.add('item');
+  console.log(newEl);
+
+  return newEl;
+
+
+});
+
+
+
+const ullIST = document.querySelector('#ingredients');
+
+ullIST.append(...ingredientsMaker);
+
+
+ 

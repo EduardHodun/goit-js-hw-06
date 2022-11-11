@@ -9,3 +9,52 @@
 // Створи змінну counterValue, в якій буде зберігатися поточне значення лічильника та ініціалізуй її значенням 0.
 // Додай слухачів кліків до кнопок, всередині яких збільшуй або зменшуй значення лічильника.
 // Оновлюй інтерфейс новим значенням змінної counterValue.
+
+
+
+const counterRef = document.querySelector('#counter');
+
+
+
+
+const btnDecrementRef = document.querySelector('button[data-action="decrement"]');
+
+const btnIncrementRef = document.querySelector('button[data-action="increment"]');
+
+const spanRef = document.querySelector('#value');
+
+
+
+let counterValue = 0;
+
+
+
+
+
+const OnDecrementClick = () => {
+
+    counterValue -= 1;
+    
+    spanRef.textContent = counterValue;
+
+    
+    
+};
+
+
+
+const OnIncrementClick = () => {
+       
+    counterValue += 1;
+    
+    spanRef.textContent = counterValue;
+
+      
+};
+
+
+
+
+btnDecrementRef.addEventListener("click", OnDecrementClick);
+
+btnIncrementRef.addEventListener("click", OnIncrementClick);
