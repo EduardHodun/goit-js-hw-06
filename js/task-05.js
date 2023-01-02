@@ -7,14 +7,20 @@ const inputRef = document.querySelector('#name-input');
 
 const spanRef = document.querySelector('#name-output');
 
-console.dir(inputRef);
-console.dir(spanRef);
+// console.dir(inputRef);
+// console.dir(spanRef);
 
 
+inputRef.addEventListener("input", OnInputClick); 
 
-const OnInputClick = () => {
+function OnInputClick(evt) {
+    
+//   console.log("event: ", evt);
+//   console.log("event type: ", evt.type);
+//   console.log("currentTarget: ", evt.currentTarget);
+
        
-    spanRef.textContent = inputRef.value;
+    spanRef.textContent = evt.currentTarget.value;
 
       
 };
@@ -22,4 +28,3 @@ const OnInputClick = () => {
 
 
 
-inputRef.addEventListener("keydown", OnInputClick);

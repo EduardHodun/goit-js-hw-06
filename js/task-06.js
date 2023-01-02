@@ -22,3 +22,39 @@
 // #validation-input.invalid {
 //   border-color: #f44336;
 // }
+
+const inputRef = document.querySelector('#validation-input');
+
+
+const OnInputClick = (evt) => {
+
+//     console.log("event: ", evt);
+//    console.log("event type: ", evt.type);
+//     console.log("currentTarget: ", evt.currentTarget);
+
+//     console.log("inputRef.value.length: ", inputRef.value.length);
+//     console.log("inputRef.value.length: ", inputRef.dataset.length);
+    
+//      evt.currentTarget.classList.add("validation-input.invalid");
+//  evt.currentTarget.classList.add("validation-input.valid");
+    
+    
+      
+    if (evt.currentTarget.value.length < inputRef.dataset.length) {
+        
+                              
+    inputRef.classList.add("validation-input-invalid");
+        
+
+    } else {
+        
+      
+            inputRef.classList.add("validation-input-valid");
+
+    };
+
+      
+};
+
+
+inputRef.addEventListener("blur", OnInputClick);

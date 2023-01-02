@@ -28,22 +28,12 @@ const spanRef = document.querySelector('#value');
 let counterValue = 0;
 
 
+btnIncrementRef.addEventListener("click", OnIncrementClick);
+btnDecrementRef.addEventListener("click", OnDecrementClick);
 
 
 
-const OnDecrementClick = () => {
-
-    counterValue -= 1;
-    
-    spanRef.textContent = counterValue;
-
-    
-    
-};
-
-
-
-const OnIncrementClick = () => {
+function OnIncrementClick () {
        
     counterValue += 1;
     
@@ -52,9 +42,13 @@ const OnIncrementClick = () => {
       
 };
 
+function OnDecrementClick () {
+
+    counterValue -= 1;
+    
+    spanRef.textContent = counterValue;
+ 
+    
+};
 
 
-
-btnDecrementRef.addEventListener("click", OnDecrementClick);
-
-btnIncrementRef.addEventListener("click", OnIncrementClick);
