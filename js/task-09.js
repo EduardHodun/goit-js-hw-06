@@ -13,8 +13,27 @@
 //     .padStart(6, 0)}`;
 // }
 
+const widgetRef = document.querySelector(".widget");
+
+console.dir(widgetRef);
+
+const SpanRef = document.querySelector(".color");
+
+const mainBtn = document.querySelector(".change-color");
+
+mainBtn.addEventListener("click", OnBtnClick);
+
+
+function OnBtnClick() {
+
+  console.log("Hello");
+  document.body.style.backgroundColor = getRandomHexColor();
+  SpanRef.textContent = document.body.style.backgroundColor;
+
+};
+
 
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+};
